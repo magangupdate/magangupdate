@@ -1,0 +1,20 @@
+{
+  "public/assets/fonts/Gilroy-Regular.woff2": {
+    "file": "assets/Gilroy-Regular-24803edf.woff2",
+    "src": "public/assets/fonts/Gilroy-Regular.woff2"
+  },
+  "public/assets/fonts/Gilroy-SemiBold.woff2": {
+    "file": "assets/Gilroy-SemiBold-049a2332.woff2",
+    "src": "public/assets/fonts/Gilroy-SemiBold.woff2"
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-4c785900.css",
+    "isEntry": true,
+    "src": "resources/css/app.css"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-a6d2e222.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  }
+}
