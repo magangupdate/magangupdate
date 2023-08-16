@@ -28,12 +28,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/storage_link', function (){ Artisan::call('storage:link'); });
 
+// LANDING PAGE
 Route::get('/', [LandingController::class, 'index'])->name('home');
 Route::get('/jobs', [LandingController::class, 'jobs'])->name('jobs');
-Route::get('/jobs/detail', [LandingController::class, 'jobDetail']);
 Route::get('/articles', [LandingController::class, 'articles'])->name('articles');
 Route::get('/magang-update-acceleration-program', [LandingController::class, 'muap'])->name('muap');
 Route::get('/cv-clinic', [LandingController::class, 'cvClinic'])->name('cv-clinic');
+
+Route::get('/jobs/detail', [LandingController::class, 'jobDetail']);
 
 /*
 |--------------------------------------------------------------------------

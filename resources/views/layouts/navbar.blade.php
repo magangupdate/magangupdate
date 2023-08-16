@@ -1,4 +1,3 @@
-
 <header class="header">
     <nav class="nav">
         <div class="nav__data">
@@ -11,18 +10,19 @@
                 <i class="ri-close-line nav__toggle-close"></i>
             </div>
         </div>
+
         <div class="nav__menu text-[15px]" id="nav-menu">
             <ul class="nav__list">
                 <li>
-                    <a href="/" class="nav__link">Home</a>
+                    <a href="{{ route('home') }}" class="nav__link">Home</a>
                 </li>
 
                 <li>
-                    <a href="/jobs" class="nav__link">Jobs</a>
+                    <a href="{{ route('jobs') }}" class="nav__link">Jobs</a>
                 </li>
 
                 <li>
-                    <a href="/articles" class="nav__link">Articles</a>
+                    <a href="{{ route('articles') }}" class="nav__link">Articles</a>
                 </li>
 
                 <li class="dropdown__item">

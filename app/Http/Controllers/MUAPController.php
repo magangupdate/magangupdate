@@ -8,7 +8,7 @@ class MUAPController extends Controller
 {
     public function index()
     {
-        return view('muap');
+        return view('MUAP.index');
     }
 
     public function regist()

@@ -52,7 +52,7 @@
             <a href="/jobs" class="hero-btn block w-fit rounded-full bg-gradient-to-tr py-3 px-7 mt-2 md:mt-6 border-white border text-white text-[16px]">Download Handbook</a>
         </div> --}}
         <div class="flex flex-col md:flex-row items-center justify-center space-x-2">
-            <a href="/jobs" class="hero-btn block w-fit rounded-full bg-gradient-to-tr py-3 px-5 mt-6 border-white border text-white text-[16px]">Coming Soon MUAP #16</a>
+            <a href="/jobs" class="hero-btn block w-fit rounded-full bg-gradient-to-tr py-3 px-5 mt-6 border-white border text-white text-[16px]">Join MUAP #16</a>
             {{-- <a href="/jobs" class="hero-btn block w-fit rounded-full bg-gradient-to-tr py-3 px-7 mt-2 md:mt-6 border-white border text-white text-[16px]">Download Handbook</a> --}}
         </div>
         @endif

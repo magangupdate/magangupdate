@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
+        {{--=============== META TAGS ===============--}}
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="{{ $description }}">
@@ -8,21 +9,20 @@
         <meta name="author" content="MagangUpdate">
         <meta http-equiv="refresh" content="3600">
 
+        {{--================= TITLE =================--}}
         <title>{{ $title }}</title>
 
+        {{--=============== CANONICAL ===============--}}
         <link rel="canonical" href="{{ $canonical }}">
+
+        {{--================= ICON ==================--}}
         <link rel="icon" href="{{ asset('assets/images/logos/logo-transparent.webp') }}">
+
+        {{--================== CSS ==================--}}
         <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
-
-         <!--=============== REMIXICONS ===============-->
-         <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-
-         <!--=============== AOS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-        <!--=============== BOXICONS ===============-->
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
         <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
@@ -169,8 +169,9 @@
       gtag('config', 'G-WF4147GRZL');
     </script> --}}
 
-    <body class="antialiased font-gilroyRegular bg-[#111] w-full h-full relative overflow-x-hidden">
+    <body class="antialiased font-gilroyRegular bg-[#111] @if ($active == 'MUAP') bg-gradient @endif w-full h-full relative overflow-x-hidden">
 
+        {{--======================== PRELOADING ========================--}}
         <div class="preload">
             <img src="{{ asset('assets/images/logos/logo-transparent.webp') }}" alt="" class="w-16 h-16">
         </div>
@@ -180,7 +181,6 @@
         @endif
 
         @if ($active === 'Home')
-
             <div class="gradient-05 overflow-hidden -left-[2vh] md:left-[10rem]"></div>
             <div class="gradient-051 overflow-hidden -left-[15vh] md:left-0"></div>
             <div class="gradient-052 overflow-hidden -left-[16vh] md:left-0"></div>
@@ -188,35 +188,35 @@
             <div class="gradient-06 overflow-hidden right-[25rem]"></div>
             <div class="gradient-061 overflow-hidden right-[19rem]"></div>
             <div class="gradient-062 overflow-hidden right-[21rem]"></div>
-            
         @endif
 
         @if ($active === 'Articles')
             <img src="{{ asset('assets/images/gradient-decoration-2.webp') }}" alt="Gradient's Decoration" title="Gradient's Decoration" class="gradient-decoration absolute top-0 right-0 -z-20 overflow-hidden">
         @endif
 
+        {{--=========================== NAVBAR ==========================--}}
         @if ($active !== 'MUA')
             @include('layouts.navbar')
         @endif
 
         @if ($active === 'MUA')
-        {{-- <audio autoplay loop>
-            <source src="{{ asset('assets/audio/mua.mp3') }}" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio> --}}
         <div class="w-full mx-auto absolute top-[250vh]">
             <img src="https://i.postimg.cc/d1P1RySX/pusaran-1.webp" class="h-[100vh] w-[130vh] opacity-25 mx-auto -z-20" alt="">
         </div>
         @endif
 
+        {{--======================= HERO SECTION ========================--}}
         @include('layouts.hero')
 
+        {{--====================== CONTENT SECTION ======================--}}
         @yield('content')
 
+        {{--=========================== FOOTER ==========================--}}
         @if ($active !== 'MUA')
             @include('layouts.footer')
         @endif
 
+        {{--=========================== SCRIPTS =========================--}}
         @include('layouts.scripts')
 
     </body>
